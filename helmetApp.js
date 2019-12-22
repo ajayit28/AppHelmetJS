@@ -4,7 +4,8 @@ let port = 8181;
  
 const app = express()
  
-app.use(helmet())
+//app.use(helmet())
+app.use(helmet.hidePoweredBy())
 
 app.get('/', (req, res)=> {
   res.send(`Welcome to HelmetJS App`)
